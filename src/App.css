@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Georgia:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+  color: #CFD8DC;
+  background-color: #0a192f;
+}
+
+main {
+  padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-family: 'Georgia', serif;
+  color: #F5F5F5;
+}
+
+a {
+  color: #64DD17;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #82ffa1;
+  text-shadow: 0 0 8px #64DD17;
+}
+
+.profile-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  color: #CFD8DC;
+}
+
+.profile-image-container {
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #37474F;
+  box-shadow: 0 0 20px rgba(100, 221, 23, 0.3);
+}
+
+.profile-name {
+    font-size: 3rem;
+    color: #F5F5F5;
+    margin-bottom: 0.5rem;
+}
+
+.brief-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.social-icons-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease;
+}
+.social-icon:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 5px #64DD17);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.contact-section .section-title {
+    color: #64DD17;
+}
+
+.contact-content {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #B0BEC5;
+}
+
+.contact-content p {
+    margin-bottom: 1rem;
+}
+
+.contact-email {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .profile-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-image-container {
+    margin-bottom: 1.5rem;
+  }
+  .profile-name {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  main {
+    padding-top: 60px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
